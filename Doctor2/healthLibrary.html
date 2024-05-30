@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Library</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .About-us{
+    background-color:#1c1c8f ;
+    text-align: center;
+    display: inline-flexbox;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    padding-top: 50px;
+    height: 150px;
+    color: white;
+    font-weight: bolder;
+    }
+    .About-us div{
+        margin-top: 15px;
+        color: white;
+        font-weight: 100;
+        font-size: large;
+        margin-left: 10px;
+    }
+    .About-us  div a{
+        color: white;
+        margin-right: 15px;
+        font-weight:500;
+        text-decoration: none;
+    }
+    .container {
+        position: relative;
+        top: 130px;
+        left: 170px;
+        bottom: 30px;
+        max-width: 800px;
+        height: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    p{
+        color: #333;
+    }
+    .health-library {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .health-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        width: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .health-card h2 {
+        margin-top: 0;
+        color: #007BFF;
+    }
+    
+    .brief-description {
+        font-size: 1em;
+        color: #666;
+    }
+    
+    .read-more {
+        background-color: black;
+        display: inline-block;
+        margin-top: 10px;
+        color:white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .read-more:hover {
+        text-decoration: underline;
+    }
+    
+    .full-content {
+        display: none;
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #333;
+    }
+    
+    .full-content.show {
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div class="About-us">
+        HEALTH CARE <br><div><span><a href="index.html">Home</a></span>
+            <span>Department</span></div>
+    <div class="container">
+        <!-- <h1>Health Library</h1> -->
+        <div class="health-library">
+            <div class="health-card">
+                <h2>Healthy Eating</h2>
+                <p class="brief-description">Healthy eating is about consuming a balanced diet rich in fruits, vegetables, whole grains, and lean proteins...</p>
+                <a href="#" class="read-more" onclick="toggleContent(event, 'content-1')">Read More</a>
+                <div id="content-1" class="full-content">
+                    <p>Healthy eating is about consuming a balanced diet rich in fruits, vegetables, whole grains, and lean proteins. It helps maintain overall health and well-being by providing essential nutrients and energy needed for daily activities. Tips for healthy eating include portion control, avoiding processed foods, and staying hydrated.</p>
+                </div>
+            </div>
+            <div class="health-card">
+                <h2>Exercise and Fitness</h2>
+                <p class="brief-description">Regular exercise is essential for maintaining physical fitness and overall health. It helps improve cardiovascular health, build muscle strength...</p>
+                <a href="#" class="read-more" onclick="toggleContent(event, 'content-2')">Read More</a>
+                <div id="content-2" class="full-content">
+                    <p>Regular exercise is essential for maintaining physical fitness and overall health. It helps improve cardiovascular health, build muscle strength, and enhance flexibility. Activities such as walking, running, cycling, and yoga can be incorporated into daily routines. Aim for at least 30 minutes of moderate exercise most days of the week.</p>
+                </div>
+            </div>
+            <div class="health-card">
+                <h2>Mental Health</h2>
+                <p class="brief-description">Mental health involves emotional, psychological, and social well-being. It affects how we think, feel, and act. Taking care of mental health...</p>
+                <a href="#" class="read-more" onclick="toggleContent(event, 'content-3')">Read More</a>
+                <div id="content-3" class="full-content">
+                    <p>Mental health involves emotional, psychological, and social well-being. It affects how we think, feel, and act. Taking care of mental health includes managing stress, seeking support from loved ones, practicing mindfulness, and, if needed, consulting a mental health professional. Good mental health is crucial for overall well-being.</p>
+                </div>
+            </div>
+            <div class="health-card">
+                <h2>Preventive Care</h2>
+                <p class="brief-description">Preventive care includes measures taken to prevent diseases, rather than curing them or treating their symptoms. This involves regular check-ups...</p>
+                <a href="#" class="read-more" onclick="toggleContent(event, 'content-4')">Read More</a>
+                <div id="content-4" class="full-content">
+                    <p>Preventive care includes measures taken to prevent diseases, rather than curing them or treating their symptoms. This involves regular check-ups, screenings, vaccinations, and adopting a healthy lifestyle. Preventive care helps detect health issues early, when they are more manageable, and promotes long-term health.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        function toggleContent(event, contentId) {
+            event.preventDefault();
+            const content = document.getElementById(contentId);
+            content.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

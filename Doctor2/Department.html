@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    margin: 2px;
+    background-color: white;
+    height: 60px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+}
+.navlink{
+    font-size: 22px;
+    text-decoration: none;
+    color: purple;
+    font-weight: 900;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-item {
+    position: relative;
+}
+
+.navbar-item a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-item a:hover {
+    background-color: blue;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 50%, 64%);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-menu .dropdown-item {
+    width: 100%;
+}
+
+.dropdown-menu .dropdown-item a {
+    padding: 12px 16px;
+}
+
+.dropdown-menu .dropdown-item a:hover {
+    background-color: #575757;
+}
+
+/* Hover effect to display the dropdown menu */
+.navbar-item:hover .dropdown-menu {
+    display: block;
+}
+
+.btn{
+    background-color: #f26a3e;
+    text-decoration: none;
+    color: white;
+    padding: 4px 16px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+@media (max-width:630px) {
+    .navbar{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .navlink{
+        border-bottom: 1px solid grey;
+        padding: 8px 0px;
+    }
+    .inner-navbar{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .inner-navlink{
+        padding: 8px 0px;
+        border-bottom: 1px solid grey;
+    }
+    .btn{
+        width: 50%;
+        padding: 8px 0px;
+        margin-top: 5px;
+    }
+}
+
+.About-us{
+    background-color:#1c1c8f ;
+    text-align: center;
+    display: inline-flexbox;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    padding-top: 50px;
+    height: 150px;
+    color: white;
+    font-weight: bolder;
+    }
+    .About-us div{
+        margin-top: 15px;
+        color: white;
+        font-weight: 100;
+        font-size: large;
+        margin-left: 10px;
+    }
+    .About-us  div a{
+        color: white;
+        margin-right: 15px;
+        font-weight:500;
+        text-decoration: none;
+    }
+    /*  */
+    .top-company{
+        position: relative;
+        top: 70px;
+        left: 250px;
+        height: 700px;
+        width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        padding-bottom: 5px;
+        background-color:white;
+    }
+    
+    .child-img{
+    margin-top: 15px;
+        border: 2px solid black;
+    }
+    
+    .a1{
+        height: 400px;
+        
+        /* margin-left: 20px; */
+        background-color: white;
+        width: 250px;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        text-align: center;
+        text-decoration: none;
+    }
+    .a1 a{
+    /* background-color: #222279; */
+        width: 150px;
+        font-size: large;
+        color: #1c1c8f;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #read1{
+        background-color: #1c1c8f;
+        position: relative;
+        top: 20px;
+        width: 250px;
+        height: 50px;
+        color: white;
+    }
+    .a2{
+        height: 400px;
+        /* margin-top: 30px; */
+        /* margin-left: 20px; */
+        background-color: white;
+        width: 250px;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        border-bottom: 1px solid gray;
+        text-align: center;
+        text-decoration: none;
+    }
+    .a2 a{
+    /* background-color: #222279; */
+        width: 150px;
+        font-size: large;
+        color: #1c1c8f;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #read2{
+        background-color: #1c1c8f;
+        position: relative;
+        top: 20px;
+        width: 250px;
+        height: 50px;
+        color: white;
+    }
+    .a3{
+        height: 400px;
+    /* padding-top: 50px; */
+        /* margin-left: 20px; */
+        background-color: white;
+        width: 250px;
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray;
+        text-align: center;
+        text-decoration: none;
+    }
+    .a3 a{
+    /* background-color: #222279; */
+        width: 150px;
+        font-size: large;
+        color: #1c1c8f;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #read3{
+        background-color: #1c1c8f;
+        position: relative;
+        top: 20px;
+        width: 250px;
+        height: 50px;
+        color: white;
+    }
+    .a4{
+        height: 400px;
+        /* margin-top: 30px; */
+        /* margin-left: 20px; */
+        background-color: white;
+        width: 250px;
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
+        text-align: center;
+        text-decoration: none;
+    }
+    .a4 a{
+    /* background-color: #222279; */
+        width: 150px;
+        font-size: large;
+        color: #1c1c8f;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #read4{
+        background-color: #1c1c8f;
+        position: relative;
+        top: 20px;
+        width: 250px;
+        height: 50px;
+        color: white;
+    }
+    .a5{
+        height: 400px;
+        /* margin-top: 30px; */
+        /* margin-left: 20px; */
+        background-color: white;
+        width: 250px;
+        border-top: 1px solid gray;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        text-align: center;
+        text-decoration: none;
+    }
+    .a5 a{
+    /* background-color: #222279; */
+        width: 150px;
+        font-size: large;
+        color: #1c1c8f;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #read5{
+        background-color: #1c1c8f;
+        position: relative;
+        top: 20px;
+        width: 250px;
+        height: 50px;
+        color: white;
+    }
+    .a6{
+        height: 400px;
+        /* margin-top: 30px; */
+        /* margin-left: 20px; */
+        background-color: white;
+        width: 250px;
+        border-left: 1px solid gray;
+        border-top: 1px solid gray;
+        text-align: center;
+        text-decoration: none;
+    }
+    .a6 a{
+    /* background-color: #222279; */
+        width: 150px;
+        font-size: large;
+        color: #1c1c8f;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #read6{
+        background-color: #1c1c8f;
+        position: relative;
+        top: 20px;
+        width: 250px;
+        height: 50px;
+        color: white;
+    }
+    /* footer */
+
+
+footer {
+    position: relative;
+    top: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <div class="navbar">
+        <a href="#" class="navlink">Dev Clinic</a>
+
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="findDoctor.html">Find a Doctor</a></li>
+            <li class="navbar-item dropdown">
+                <a href="#" class="dropdown-toggle">Health Library</a>
+                <ul class="dropdown-menu" >
+                    <li class="dropdown-item"><a href="services.html">Services</a></li>
+                    <li class="dropdown-item"><a href="help.html">Help</a></li>
+                    <li class="dropdown-item"><a href="Schedule.html">Schedule Book</a></li>
+                </ul>
+            </li>
+            <li class="navbar-item"><a href="Appointment.html">Appointment Book</a></li>
+            <li class="navbar-item"><a href="healthLibrary.html">Health Library</a></li>
+            <li class="navbar-item"><a href="contact.html" onclick="loadContent('Contact.html')">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="About-us">
+        DEPARTMENT <br><div><span><a href="index.html">Home</a></span>
+            <span>Department</span></div>
+    </div>
+    <!-- main -->
+    <div class="company">
+        <div class="top-company">
+        <div class="a1"><img class="child-img" src="image/Ct-scan-photo.jpg"
+            alt="" height="220px" width="200"><p><a href="childCare.html">CT SCANNER</a> <br>A child care institution as defined
+                under the JJ Act,2015, means Children Home, Open Shelter, Observation Home, Special
+                Home, Place of Safety</p> <a href="#" id="read1">Read More</a></div>
+
+    <div class="a2"><img class="child-img" src="image/personal-care-photo.avif"
+            alt="" height="220px" width="200"><p><a href="childCare.html">Personal Care</a><br>A child care institution as defined
+                under the JJ Act,2015, means Children Home, Open Shelter, Observation Home, Special
+    Home, Place of Safety</p> <a href="#" id="read2">Read More</a></div>
+
+    <div class="a3"><img class="child-img" src="image/join-placement-photo.jpeg"
+    alt="" height="220px" width="200"><p><a href="childCare.html">Joint Placement</a> <br>A child care institution as defined
+    under the JJ Act,2015, means Children Home, Open Shelter, Observation Home, Special
+    Home, Place of Safety</p> <a href="#" id="read3">Read More</a></div>
+
+    <div class="a4"><img class="child-img" src="image/examinatio-photo.webp"
+    alt="" height="220px" width="200"><p><a href="childCare.html">Examination</a> <br>A child care institution as defined
+    under the JJ Act,2015, means Children Home, Open Shelter, Observation Home, Special
+    Home, Place of Safety</p> <a href="#" id="read4">Read More</a></div>
+
+    <div class="a5"><img class="child-img" src="image/disease-photo.webp"
+    alt="" height="220px" width="200"><p><a href="childCare.html">Disease</a> <br>A child care institution as defined
+    under the JJ Act,2015, means Children Home, Open Shelter, Observation Home, Special
+    Home, Place of Safety</p> <a href="#" id="read5">Read More</a></div>
+
+    <div class="a6"><img class="child-img" src="image/chid-care-photo.webp"
+        alt="" height="220px" width="200"><p><a href="childCare.html">Child Care </a><br>A child care institution as defined
+        under the JJ Act,2015, means Children Home, Open Shelter, Observation Home, Special
+        Home, Place of Safety </p> <a href="#" id="read6">Read More</a></div>
+
+    </div>
+    </div>
+
+    <!-- footer -->
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Mission And Vision</a></li>
+                <li><a href="#">Leadership</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Patient Resources</h4>
+            <ul>
+                <li><a href="#">Appointment Scheduling</a></li>
+                <li><a href="#">Patient Portal</a></li>
+                <li><a href="#">Insurance And Billing</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><a href="#">Contact Form</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <span href="#"><i class="fa fa-facebook"></i></span>
+                <span href="#"><i class="fa fa-twitter"></i></span>
+                <span href="#"><i class="fa fa-instagram"></i></span>
+                <span href="#"><i class="fa fa-linkedin"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Healthcare Company. All rights reserved.
+    </div>
+</footer>
+</body>
+</html>

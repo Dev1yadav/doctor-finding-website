@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Doctor</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .navbar{
+    margin: 2px;
+    background-color: white;
+    height: 60px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+   
+}
+.navlink{
+    font-size: 22px;
+    text-decoration: none;
+    color: purple;
+    font-weight: 900;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-item {
+    position: relative;
+}
+
+.navbar-item a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-item a:hover {
+    background-color: blue;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+.dropdown-menu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 50%, 64%);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-menu .dropdown-item {
+    width: 100%;
+}
+
+.dropdown-menu .dropdown-item a {
+    padding: 12px 16px;
+}
+
+.dropdown-menu .dropdown-item a:hover {
+    background-color: #575757;
+}
+
+/* Hover effect to display the dropdown menu */
+.navbar-item:hover .dropdown-menu {
+    display: block;
+}
+
+.btn{
+    background-color: #f26a3e;
+    text-decoration: none;
+    color: white;
+    padding: 4px 16px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+@media (max-width:630px) {
+    .navbar{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .navlink{
+        border-bottom: 1px solid grey;
+        padding: 8px 0px;
+    }
+    .inner-navbar{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .inner-navlink{
+        padding: 8px 0px;
+        border-bottom: 1px solid grey;
+    }
+    .btn{
+        width: 50%;
+        padding: 8px 0px;
+        margin-top: 5px;
+    }
+}
+/* main */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        height: 500px;
+    }
+    main{
+        height: 600px;
+    }
+    .container {
+        max-width: 600px;
+        height: 150px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f1eae8;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    .search-box {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .search-box input {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    
+    .search-box button {
+        padding: 10px 15px;
+        margin-left: 10px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .search-box button:hover {
+        background-color: #0056b3;
+    }
+    /* Styles for doctor cards */
+        .doctor-card {
+            position: relative;
+            top: 50px;
+            display: flex;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .doctor-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px 0 0 8px;
+            object-fit: cover;
+        }
+        
+        .doctor-info {
+            padding: 15px;
+            flex: 1;
+        }
+        
+        h2 {
+            margin: 0 0 10px;
+            color: #007BFF;
+        }
+        
+        p {
+            margin: 0;
+        }
+        /* footer */
+        footer {
+    position:relative;
+    top: 110px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    background-color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-column h4 {
+    color: wheat;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+    /* Other styles remain the same */
+        </style>
+</head>
+<body>
+    <main><div class="navbar">
+        <a href="#" class="navlink">Dev Clinic</a>
+
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="index.html">Home</a></li>
+            <li class="navbar-item"><a href="findDoctor.html">Find a Doctor</a></li>
+            <li class="navbar-item dropdown">
+                <a href="healthLibrary.html" class="dropdown-toggle">Health Library</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="services.html">Services</a></li>
+                    <li class="dropdown-item"><a href="help.html">Help</a></li>
+                    <li class="dropdown-item"><a href="Appointment.html">Appointment Book</a></li>
+                </ul>
+            </li>
+            <li class="navbar-item"><a href="Schedule.html">Schedule Book</a></li>
+            <li class="navbar-item"><a href="Department.html">Department</a></li>
+            <li class="navbar-item"><a href="contact.html" onclick="loadContent('Contact.html')">Contact</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Search for a Doctor</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Enter doctor's name or specialty...">
+            <button  type="button" onclick="searchDoctor()">Search</button>
+        </div>
+        <div id="results" class="results"></div>
+    </div></main>
+<!-- footer -->
+<div class="footer-container">
+    <div class="footer-column">
+        <h4>About Us</h4>
+        <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Mission And Vision</a></li>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Careers</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Patient Resources</h4>
+        <ul>
+            <li><a href="#">Appointment Scheduling</a></li>
+            <li><a href="#">Patient Portal</a></li>
+            <li><a href="#">Insurance And Billing</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Contact Us</h4>
+        <ul>
+            <li><a href="#">Contact Form</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+            <span href="#"><i class="fa fa-facebook"></i></span>
+            <span href="#"><i class="fa fa-twitter"></i></span>
+            <span href="#"><i class="fa fa-instagram"></i></span>
+            <span href="#"><i class="fa fa-linkedin"></i></span>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom">
+    &copy; 2024 Healthcare Company. All rights reserved.
+</div>
+
+<script>const doctors = [
+        {
+            name: 'Dr. Priyanka Prajapati',
+            photo: 'doctorImage/cardiologyDoctor.jpeg',
+            profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque nisi at quam.',
+            specialties: ['Cardiology', 'Internal Medicine'],
+            contact: '123-456-7890',
+            experience: '10 years'
+        },
+        {
+            name: 'Dr. Rajendra Jatav',
+            photo: 'doctorImage/man.jpg',
+            profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque nisi at quam.',
+            specialties: ['Cardiology', 'Internal Medicine'],
+            contact: '123-456-7890',
+            experience: '10 years'
+        },
+        {
+            name: 'Dr. Pankaj Singh',
+            photo: 'doctorImage/cardiologyDoctor.jpeg',
+            profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque nisi at quam.',
+            specialties: ['Cardiology', 'Internal Medicine'],
+            contact: '456-587-568',
+            experience: '8 years'
+        },
+        {
+            name: 'Dr. Rajendra Jatav',
+            photo: 'doctorImage/cardiologyDoctor.jpeg',
+            profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque nisi at quam.',
+            specialties: ['Cardiology', 'Internal Medicine'],
+            contact: '123-456-7890',
+            experience: '5years'
+        },
+        {
+            name: 'Dr. Priyanka yadav',
+            photo: 'doctorImage/cardiologyDoctor.jpeg',
+            profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque nisi at quam.',
+            specialties: ['Neurology','Ne', 'Internal Medicine'],
+            contact: '123-456-7890',
+            experience: '10 years'
+        },
+        { 
+            name: 'Dr. Jagdish Prajapati',
+            photo: 'doctor2.jpg',
+            profile: 'Sed eu eros non lacus accumsan rhoncus vitae eu libero. Donec tincidunt bibendum ex eu efficitur.',
+            specialties: ['Dermatology', 'Cosmetic Procedures'],
+            contact: '456-789-0123',
+            experience: '8 years'
+        },
+        // Add more doctor data as needed
+    ];
+    
+    function searchDoctor() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML = '';
+    
+        if (query === '') {
+            resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
+            return;
+        }
+    
+        const filteredDoctors = doctors.filter(doctor => 
+            doctor.name.toLowerCase().includes(query) || 
+            doctor.specialties.some(specialty => specialty.toLowerCase().includes(query))
+        );
+    
+        displayResults(filteredDoctors);
+    }
+    
+    function displayResults(doctors) {
+        const resultsContainer = document.getElementById('results');
+    
+        if (doctors.length === 0) {
+            resultsContainer.innerHTML = '<p>No doctors found.</p>';
+            return;
+        }
+    
+        doctors.forEach(doctor => {
+            const doctorCard = document.createElement('div');
+            doctorCard.classList.add('doctor-card');
+    
+            const photo = document.createElement('img');
+            photo.src = doctor.photo;
+            photo.alt = doctor.name;
+    
+            const doctorInfo = document.createElement('div');
+            doctorInfo.classList.add('doctor-info');
+            doctorInfo.innerHTML = `
+                <h2>${doctor.name}</h2>
+                <p><strong>Profile:</strong> ${doctor.profile}</p>
+                <p><strong>Specialties:</strong> ${doctor.specialties.join(', ')}</p>
+                <p><strong>Contact:</strong> ${doctor.contact}</p>
+                <p><strong>Experience:</strong> ${doctor.experience}</p>
+            `;
+    
+            doctorCard.appendChild(photo);
+            doctorCard.appendChild(doctorInfo);
+            resultsContainer.appendChild(doctorCard);
+        });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* header */
+        .navbar{
+    margin: 2px;
+    background-color: white;
+    height: 60px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+   
+}
+.navlink{
+    font-size: 22px;
+    text-decoration: none;
+    color: purple;
+    font-weight: 900;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-item {
+    position: relative;
+}
+
+.navbar-item a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-item a:hover {
+    background-color: blue;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: hsl(0, 50%, 64%);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-menu .dropdown-item {
+    width: 100%;
+}
+
+.dropdown-menu .dropdown-item a {
+    padding: 12px 16px;
+}
+
+.dropdown-menu .dropdown-item a:hover {
+    background-color: #575757;
+}
+
+/* Hover effect to display the dropdown menu */
+.navbar-item:hover .dropdown-menu {
+    display: block;
+}
+
+.btn{
+    background-color: #f26a3e;
+    text-decoration: none;
+    color: white;
+    padding: 4px 16px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+@media (max-width:630px) {
+    .navbar{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .navlink{
+        border-bottom: 1px solid grey;
+        padding: 8px 0px;
+    }
+    .inner-navbar{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .inner-navlink{
+        padding: 8px 0px;
+        border-bottom: 1px solid grey;
+    }
+    .btn{
+        width: 50%;
+        padding: 8px 0px;
+        margin-top: 5px;
+    }
+}
+
+
+
+        /* main */
+    .About-us{
+    background-color:#1c1c8f ;
+    text-align: center;
+    display: inline-flexbox;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    padding-top: 50px;
+    height: 150px;
+    color: white;
+    font-weight: bolder;
+    }
+    .About-us div{
+        margin-top: 15px;
+        color: white;
+        font-weight: 100;
+        font-size: large;
+    }
+    .About-us  div a{
+        color: white;
+        margin-right: 15px;
+        font-weight:500;
+        text-decoration: none;
+    }
+
+/* main */
+
+/* hih */
+.dev{
+    position: relative;
+    top: 70px;
+    left: 250px;
+    height: 500px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    background-color:wheat;
+}
+.sub-dev .a{
+    height: 400px;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color: white;
+    width: 400px;
+    border-bottom: 3px solid #222279;
+    text-align: center;
+    text-decoration: none;
+}
+/*  */
+.mid{
+    background-color:white;
+    display: flex;
+    height: 500px;
+    width: 1000px;
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+.mid-left{
+    background-color: #f26a3e;
+    height: 400px;
+    width: 400px;
+margin-left: 70px;
+margin-top: 50px;
+}
+.mid-right{
+    background-color: white;
+    height: 400px;
+    width: 500px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.mid-right p{
+    text-align: center;
+    color: rgb(12, 12, 103);
+    font-weight: bold;
+    font-size:xx-large;
+    
+}
+.mid-right h4{
+    color: black;
+}
+.mid1{
+    display: flex;
+}
+.right-mid span{
+    background-color: white;
+    width: 100px;
+    position: relative;
+    width: 100px;
+    left: 10px;
+    margin-left: 50px;
+}
+.left-mid span{
+    background-color: white;
+    width: 100px;
+    position: relative;
+    width: 100px;
+    left: 10px;
+    margin-left: 10px;
+}
+.read{
+    color: white;
+    width: 100px;
+    height: 30px;
+    background-color: #1c1c8f;
+    margin-left: 0px;
+    text-align: center;
+    padding-top: 5px;
+    text-decoration: none;
+}
+/* services */
+.services{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    left: 250px;
+    height: 400px;
+    width: 800px;
+    background-color: #1c1c8f;
+}
+.top-services p{
+
+    color: black;
+    text-align: center;
+}
+.sub-services{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    background-color: gray;
+    height: 150px;
+    width: 300px;
+}
+
+/* our services */
+h1{
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+.top-company{
+    position: relative;
+    top: 70px;
+    left: 250px;
+    height: 500px;
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    background-color:wheat;
+}
+.top-company .a{
+    height: 160px;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color: white;
+    width: 200px;
+    border-bottom: 3px solid #222279;
+    text-align: center;
+    text-decoration: none;
+}
+.company{
+    background-color: white;
+}
+.logo1{
+    margin-top: 9px;
+    margin-left: 10px;
+}
+
+/* footer */
+
+
+footer {
+    position: relative;
+    top: 110px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+        </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navlink">Dev Clinic</a>
+
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="index.html">Home</a></li>
+            <li class="navbar-item"><a href="findDoctor.html">Find a Doctor</a></li>
+            <li class="navbar-item dropdown">
+                <a href="#" class="dropdown-toggle">Health Library</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="services.html">Services</a></li>
+                    <li class="dropdown-item"><a href="help.html">Help</a></li>
+                    <li class="dropdown-item"><a href="Appointment.html">Appointment Book</a></li>
+                </ul>
+            </li>
+            <li class="navbar-item"><a href="Schedule.html">Schedule Book</a></li>
+            <li class="navbar-item"><a href="Department.html"> Department</a></li>
+            <li class="navbar-item"><a href="#" onclick="loadContent('Contact.html')">Contact</a></li>
+        </ul>
+    </div>
+    <div class="About-us">
+        OUR SERVICES <br><div><span><a href="index.html">Home</a></span>
+            <span>services</span></div>
+    </div>
+
+
+<!-- main body -->
+<div class="mid">
+    <div class="mid-left"><img src="image/pexels-shkrabaanthony-5215024.jpg" alt="photo" height="400px" width="400px"></div>
+    <div class="mid-right"><p>We Treat With Care And Love</p>
+    <h4>We have to provide one of the best doctors in city, with 25th certified and qualified.
+    </h4><br>
+
+
+    <div class="mid1">
+        <div class="left-mid"><span><img src="image/usser-icon-removebg-preview.png" alt="logo" height="10px"
+        width="10px"> Adult trauma Center</span> <span></span>
+        <br><span> <img src="image/usser-icon-removebg-preview.png" alt="logo" height="10px"
+                width="10px"> Birthing Services</span>
+            </div>
+            <div class="right-mid"><span><img src="image/usser-icon-removebg-preview.png" alt="logo" height="10px"
+                width="10px"> Adult trauma Center</span><br>
+                <span> <img src="image/usser-icon-removebg-preview.png" alt="logo" height="10px"
+                    width="10px"> Birthing Services</span>
+                </div>
+            </div><br><br>
+            <div class="read"><a href="#" class="read">Read More</a></div></div>
+</div>
+
+<!-- our services -->
+<h1>OUR SERVICES</h1>
+<div class="company">
+    <div class="top-company">
+      <div class="a"><img class="logo1" src="image/love.png" alt="logo" height="50px" width="50px"><br>Cardiology<br><br>We have to provide one of the best doctors in city, with 25th certified and qualified.</div>
+      <div class="a"><img  class="logo1" src="image/tooth.png" alt="" height="50px" width="50px"><br>Dental Care <br><br>We have to provide one of the best doctors in city, with 25th certified and qualified.</div>
+      <div class="a"><img class="logo1" src="image/gacology.png" alt="" height="50px" width="50px"><br>Ginecology <br> <br>We have to provide one of the best doctors in city, with 25th certified and qualified.</div>
+      <div class="a"><img class="logo1" src="image/happiness.png" alt="logo" height="50px" width="50px"> <br>Pediatrics  <br><br>We have to provide one of the best doctors in city, with 25th certified and qualified.</div>
+      <div class="a"><img class="logo1" src="image/brain.png" alt="" height="50px" width="50px"><br>Neurology <br><br>We have to provide one of the best doctors in city, with 25th certified and qualified.</div>
+      <div class="a"><img  class="logo1" src="image/heart.png" alt="" height="50px" width="50px"><br>Cardiology <br> <br>We have to provide one of the best doctors in city, with 25th certified and qualified.</div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Mission And Vision</a></li>
+                <li><a href="#">Leadership</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Patient Resources</h4>
+            <ul>
+                <li><a href="#">Appointment Scheduling</a></li>
+                <li><a href="#">Patient Portal</a></li>
+                <li><a href="#">Insurance And Billing</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><a href="#">Contact Form</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <span href="#"><i class="fa fa-facebook"></i></span>
+                <span href="#"><i class="fa fa-twitter"></i></span>
+                <span href="#"><i class="fa fa-instagram"></i></span>
+                <span href="#"><i class="fa fa-linkedin"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Healthcare Company. All rights reserved.
+    </div>
+</footer>
+</body>
+</html>
